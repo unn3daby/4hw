@@ -5,7 +5,7 @@ import type { FileSystemModel, FileSystemRecordModel } from './types/TreeModel';
 
 function fakeRequest(): Promise<FileSystemModel> {
   return new Promise((res) => {
-    setTimeout(() => res(tree as FileSystemModel), 3000)
+    setTimeout(() => res(tree as FileSystemModel), 1000)
   })
 }
 
