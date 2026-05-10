@@ -1,5 +1,5 @@
-import { isEqualsTrue } from "../../utils/isStrictTrue";
-import { createTreeButton } from "../tree-button/treeButton";
+import { isEqualsTrue } from "@utils/isStrictTrue";
+import { createTreeButton } from "@components/tree-button/treeButton";
 import folderIcon from '@/assets/folder.svg';
 import chevronIcon from '@/assets/chevron-down.svg';
 import folderOpenedIcon from '@/assets/folder-open.svg';
