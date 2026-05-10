@@ -9,7 +9,7 @@ function setupFolderButton(buttonNode: HTMLElement, isOpened: boolean = false) {
   buttonNode.setAttribute('data-opened', isOpened ? 'true' : 'false')
 
   buttonNode.addEventListener('click', () => {
-    const isFolderOpened = isEqualsTrue(buttonNode.getAttribute('data-opened'));
+    const isFolderOpened = isEqualsTrue(buttonNode.getAttribute('data-opened') ?? 'false');
     buttonNode.setAttribute('data-opened', String(!isFolderOpened));
   });
 }

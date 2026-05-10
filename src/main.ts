@@ -11,6 +11,8 @@ function fakeRequest(): Promise<FileSystemModel> {
 
 async function init() {
   const rootElement = document.querySelector<HTMLDivElement>('#app');
+  if (!rootElement) throw new Error('Root element not found!');
+
   rootElement.textContent = 'Идет загрузка...';
   try {
     const data = await fakeRequest();
@@ -22,7 +24,7 @@ async function init() {
       decodeURIComponent(window.location.hash.slice(1))
     );
   } catch (e) {
-    throw new Error(e)
+    throw new Error(String(e))
   }
 }
 

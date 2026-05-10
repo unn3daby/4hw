@@ -1,4 +1,4 @@
-import { setupHashPusher } from "@/utils/setupHashPusher";
+import { setupHashPusher } from "@utils/setupHashPusher";
 import { createFolderButton } from "./folderButton";
 import './folderNode.css';
 

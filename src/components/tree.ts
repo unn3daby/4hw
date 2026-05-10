@@ -17,6 +17,8 @@ export function createTree(root: HTMLElement, tree: FileSystemRecordModel, curre
       case 'folder': {
         const { folderRootNode, childListWrapper } = createFolderNode(key, currentPathString, isFolderOpened, isButtonActive);
         renderNode(root, folderRootNode);
+        if (!value.children) return;
+
         createTree(childListWrapper, value.children, currentPathCopy, activePath);
         break;
       }

@@ -1,6 +1,6 @@
 import './treeButton.css';
 
-function createIcon(icon?: string | HTMLElement) {
+function createIcon(icon: string | HTMLElement) {
   if (icon instanceof HTMLElement) return icon;
 
   const iconNode = document.createElement('img');
