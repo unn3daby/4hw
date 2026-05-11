@@ -10,14 +10,10 @@ function createFolderElement(name?: string, tagName: keyof HTMLElementTagNameMap
 
 export function createFolderNode(name: string, path: string, isOpened?: boolean, isActive?: boolean) {
   const folderRootNode = createFolderElement();
-  const buttonNode = createFolderButton(name, isActive, isOpened);
+  const buttonNode = setupHashPusher(createFolderButton(name, isActive, isOpened), path);
   const childListWrapper = createFolderElement('children');
 
-
-  folderRootNode.appendChild(buttonNode);
-  folderRootNode.appendChild(childListWrapper);
-
-  setupHashPusher(buttonNode, path);
+  [buttonNode, childListWrapper].forEach((node) => folderRootNode.appendChild(node))
 
   return { folderRootNode, childListWrapper };
 }
