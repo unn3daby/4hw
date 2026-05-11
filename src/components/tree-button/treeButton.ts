@@ -18,12 +18,13 @@ function setupTreeButton(button: HTMLElement) {
 // TODO: аргументы после текста закинуть в объект и деструктурировать
 export function createTreeButton(text: string, icon?: string | HTMLElement, customClass?: string, isActive?: boolean) {
   const buttonNode = document.createElement('button');
+  buttonNode.classList.add('tree-button');
+
   const buttonContent = document.createElement('div');
+   buttonContent.classList.add('tree-button__content')
 
   buttonNode.appendChild(buttonContent)
 
-  buttonNode.classList.add('tree-button');
-  buttonContent.classList.add('tree-button__content')
   customClass && buttonNode.classList.add(customClass);
   isActive && buttonNode.classList.add('tree-button--active')
 
